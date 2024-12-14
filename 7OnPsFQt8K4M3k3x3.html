@@ -1,0 +1,389 @@
+<html><head><base href="." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sponsor a Vasectomy - Making the World Better, One Snip at a Time</title>
+<style>
+  :root {
+    --primary: #8e44ad;
+    --secondary: #e74c3c;
+    --accent: #3498db;
+    --light: #f7f9fc;
+  }
+
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    color: var(--primary);
+    line-height: 1.6;
+    background: linear-gradient(45deg, #f7f9fc 25%, #e8f4f8 25%, #e8f4f8 50%, #f7f9fc 50%, #f7f9fc 75%, #e8f4f8 75%, #e8f4f8 100%);
+    background-size: 40px 40px;
+    animation: backgroundMove 10s linear infinite;
+  }
+
+  @keyframes backgroundMove {
+    from { background-position: 0 0; }
+    to { background-position: 40px 40px; }
+  }
+
+  .header {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .happy-sperm {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0;
+    animation: floatAway 3s linear infinite;
+  }
+
+  @keyframes floatAway {
+    0% { 
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+    100% { 
+      transform: translate(-100px, -100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .scissors-icon {
+    animation: snip 3s infinite;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+  }
+
+  @keyframes snip {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(-20deg) scale(1.2); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 15px rgba(142, 68, 173, 0.2);
+    transition: all 0.3s ease;
+    border: 3px solid #8e44ad;
+  }
+
+  .card:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 12px 20px rgba(142, 68, 173, 0.3);
+  }
+
+  .btn {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  }
+
+  .btn:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+  }
+
+  .counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+    text-align: center;
+    margin: 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .package-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 8px 15px rgba(142, 68, 173, 0.2);
+    transition: all 0.3s ease;
+    border: 3px solid #8e44ad;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .package-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(142, 68, 173, 0.3);
+  }
+
+  .packages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateX(10px);
+    background: #f0f0f0;
+  }
+
+  .faq-answer {
+    color: var(--secondary);
+    margin-top: 1rem;
+    font-style: italic;
+  }
+
+  .extras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .extra-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .extra-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .step-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary);
+    transition: all 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateX(10px);
+  }
+
+  .certificate-preview {
+    border: 10px solid #gold;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: center;
+    background: linear-gradient(45deg, #fff8dc, #fffaf0);
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <svg class="scissors-icon" viewBox="0 0 24 24" fill="white">
+      <path d="M12,2C9.24,2 7,4.24 7,7l5,7l-5,7c0,2.76 2.24,5 5,5s5-2.24 5-5l-5-7l5-7C17,4.24 14.76,2 12,2zM12,4c1.66,0 3,1.34 3,3l-3,4.2L9,7C9,5.34 10.34,4 12,4z"/>
+    </svg>
+    <h1>Sponsor a Vasectomy</h1>
+    <p>Making the World Better, One Snip at a Time™</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Why Sponsor a Vasectomy?</h2>
+      <p>Let's face it - some people shouldn't be adding to the gene pool. Instead of complaining about it on social media, why not be part of the solution? Your generous sponsorship helps provide voluntary vasectomies to those who probably shouldn't be fathers.</p>
+    </div>
+
+    <div class="counter">
+      <span id="vasectomy-count">0</span>
+      <p>Future Crisis Averted</p>
+    </div>
+
+    <div class="benefits">
+      <div class="card">
+        <h3>Benefits for Society</h3>
+        <ul>
+          <li>Fewer unsupervised children at Walmart</li>
+          <li>Reduced strain on family court system</li>
+          <li>Decreased demand for energy drinks</li>
+          <li>Lower tattoo regret statistics</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Benefits for the Planet</h3>
+        <ul>
+          <li>Smaller carbon footprint</li>
+          <li>Fewer monster truck rallies</li>
+          <li>Reduced demand for plastic lawn furniture</li>
+          <li>Fewer "Instagram influencer" aspirants</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Ready to Make a Difference?</h2>
+      <p>For just $0.50 a day, you can sponsor a voluntary vasectomy. That's less than your daily coffee, and infinitely more beneficial to humanity!</p>
+      <button class="btn" onclick="sponsor()">Sponsor Now</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="steps-container">
+      <div class="step-card">
+        <h3>1. Identify the "Candidate"</h3>
+        <p>Think of that guy who uses phrases like, "I'm just built different" or "Kids today are too soft." You know the one. Nominate him.</p>
+      </div>
+
+      <div class="packages-container">
+        <div class="package-card">
+          <h3>The "Snip & Forget"</h3>
+          <p>Simple. Effective. Quick enough that he can still catch the game.</p>
+          <button class="btn" onclick="selectPackage('basic')">Select Package</button>
+        </div>
+
+        <div class="package-card">
+          <h3>The "No Mo' Mojo"</h3>
+          <p>Includes a free pack of condoms, because overachievers might still try.</p>
+          <button class="btn" onclick="selectPackage('premium')">Select Package</button>
+        </div>
+
+        <div class="package-card">
+          <h3>The "Antinatalist Deluxe"</h3>
+          <p>Comes with a personalized thank-you note from Mother Earth.</p>
+          <button class="btn" onclick="selectPackage('deluxe')">Select Package</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Fun Extras!</h2>
+        <div class="extras-grid">
+          <div class="extra-item">
+            <h3>Certificate of Non-Breeding</h3>
+            <p>Send him a framed reminder that he did the right thing.</p>
+          </div>
+          <div class="extra-item">
+            <h3>Ice Pack with a Message</h3>
+            <p>"Chill out—this is the smartest decision you'll ever make."</p>
+          </div>
+          <div class="extra-item">
+            <h3>Honorary Membership</h3>
+            <p>Join the "Childfree Champions" Hall of Fame.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>FAQs: Frequently Antinatalist Questions</h2>
+        <div class="faq-item">
+          <h3>Q: Isn't this cruel?</h3>
+          <div class="faq-answer">A: Cruel is birthing another being into a world with rush-hour traffic, existential dread, and pineapple on pizza.</div>
+        </div>
+        <div class="faq-item">
+          <h3>Q: How much does it cost?</h3>
+          <div class="faq-answer">A: Less than raising a kid. And infinitely less annoying.</div>
+        </div>
+        <div class="faq-item">
+          <h3>Q: What if he doesn't want it?</h3>
+          <div class="faq-answer">A: Does he really want another human being asking "Why?" every 3 seconds? Probably not.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+let count = 0;
+const counterElement = document.getElementById('vasectomy-count');
+
+function createFloatingSperm() {
+    const sperm = document.createElement('div');
+    sperm.className = 'happy-sperm';
+    sperm.innerHTML = '🎈';
+    sperm.style.left = Math.random() * window.innerWidth + 'px';
+    sperm.style.top = window.innerHeight + 'px';
+    document.body.appendChild(sperm);
+    
+    setTimeout(() => {
+        sperm.remove();
+    }, 3000);
+}
+
+function sponsor() {
+    count++;
+    counterElement.textContent = count;
+    
+    for(let i = 0; i < 5; i++) {
+        setTimeout(createFloatingSperm, i * 200);
+    }
+    
+    const messages = [
+        "You just prevented at least 3 future TikTok accounts! 🎉",
+        "Somewhere, a jet ski dealership shed a tear... 😢",
+        "A tribal tattoo artist just felt a disturbance in the force 🎨",
+        "One less 'Live, Laugh, Love' sign will be purchased 🏠",
+        "A monster energy drink stock just dropped slightly 📉",
+        "A future mall ninja has been prevented! 🥷",
+        "The local vape shop's future earnings just decreased 💨",
+        "One less 'It's not a phase, mom!' phase avoided 🤘"
+    ];
+    
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    alert(randomMessage);
+}
+
+function selectPackage(type) {
+    const packageMessages = {
+        'basic': "You've selected the 'Snip & Forget' package! Quick and easy, just like the decision not to procreate.",
+        'premium': "The 'No Mo' Mojo' package is yours! We'll throw in some backup protection, just in case.",
+        'deluxe': "Congratulations on choosing the 'Antinatalist Deluxe'! Mother Earth is already writing your thank-you note."
+    };
+    
+    alert(packageMessages[type]);
+    sponsor(); // Trigger the existing sponsor animation
+}
+</script>
+
+</body></html>
