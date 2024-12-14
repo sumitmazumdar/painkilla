@@ -7,4 +7,5 @@
 * [Tokenomics](tokenomics.md)
 * [Why It'll Work (And Why It Might Not)](why-it-works.md)
 * [The Future](future.md)
+* [How to Buy Painkilla Tokens](how-to-buy.md)
 * [Call to Action](call-to-action.md)
